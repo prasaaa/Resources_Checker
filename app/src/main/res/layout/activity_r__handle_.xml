@@ -24,27 +24,16 @@
             android:layout_marginStart="64dp"
             android:layout_marginLeft="64dp"
             android:layout_marginTop="108dp"
-            android:text="Add Resource Category" />
+            android:text="Add Resource " />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="269dp"
             android:layout_height="65dp"
+            android:layout_alignStart="@+id/button7"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="252dp"
-            android:text="Display Resource Category" />
+            android:layout_marginTop="370dp"
+            android:text="Display Resource " />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="278dp"
-            android:layout_height="65dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="76dp"
-            android:layout_marginLeft="76dp"
-            android:layout_marginBottom="189dp"
-            android:text="Update Resource Category" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
