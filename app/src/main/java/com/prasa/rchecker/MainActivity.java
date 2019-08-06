@@ -11,10 +11,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView bgapp;
-    Animation loganim;
-    LinearLayout textsplash,logintext,menus;
-    private CardView c_view1,c_view2;
+    private ImageView bgapp;
+    private Animation loganim;
+    private LinearLayout textsplash,logintext,main_1,main_2;
+    private CardView Main_c_view1,Main_c_view2;
+
 
 
 
@@ -29,28 +30,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //clover = (ImageView) findViewById(R.id.clover);
         textsplash = (LinearLayout) findViewById(R.id.textsplash);
         logintext = (LinearLayout) findViewById(R.id.logintext);
-        menus = (LinearLayout) findViewById(R.id.menus);
+        main_1 = (LinearLayout) findViewById(R.id.main_1);
+        main_2 = (LinearLayout) findViewById(R.id.main_1);
 
         bgapp.animate().translationY(-1000).setDuration(6000).setStartDelay(0);
 
         textsplash.animate().translationY(140).alpha(0).setDuration(4000).setStartDelay(500);
-        menus.animate().translationY(140).setStartDelay(8000).setDuration(8000);
+        main_1.animate().setDuration(8000).setStartDelay(300);
+        main_2.animate().setDuration(8000).setStartDelay(300);
+        //menus.animate().translationY(140).setStartDelay(8000).setDuration(8000);
 
-       // loganim = AnimationUtils.loadAnimation(this,R.anim.loganim);
-
-       // bganim = AnimationUtils.loadAnimation(this,R.anim.bganim);
 
 
         logintext.startAnimation(loganim);
-        menus.startAnimation(loganim);
+       // menus.startAnimation(loganim);
+        main_1.startAnimation(loganim);
+        main_2.startAnimation(loganim);
 
 
-        c_view1 = (CardView) findViewById(R.id.cardview_Emp_Mgt_1);//define cardview
-        c_view2 = (CardView) findViewById(R.id.cardview_Emp_Mgt_2);//define cardview
+
+        Main_c_view1 = (CardView) findViewById(R.id.cardview_Main_5);//define cardview
+        Main_c_view2 = (CardView) findViewById(R.id.cardview_Main_2);//define cardview
 
         //add click listner
-        c_view1.setOnClickListener(this);
-        c_view2.setOnClickListener(this);
+        Main_c_view1.setOnClickListener(this);
+        Main_c_view2.setOnClickListener(this);
     }
 
     @Override
@@ -58,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
 
         switch (v.getId()) {
-            case R.id.cardview_Emp_Mgt_1: i = new Intent(this,Emp_Main_Activity.class);startActivity(i);
+            case R.id.cardview_Main_5: i = new Intent(this,Emp_Main_Activity.class);startActivity(i);
                 break;
-            case R.id.cardview_Emp_Mgt_2: i = new Intent(this,Emp_View_Activity.class);startActivity(i);
+            case R.id.cardview_Main_2: i = new Intent(this,Emp_View_Activity.class);startActivity(i);
                 break;
                 default:break;
         }
