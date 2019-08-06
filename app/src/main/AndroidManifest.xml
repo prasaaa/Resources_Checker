@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Emp_View_Activity"></activity>
+        <activity android:name=".Emp_Main_Activity" />
+        <activity android:name=".Emp_View_Activity" />
         <activity android:name=".Emp_Add_Activity" />
         <activity android:name=".View_R_Activity" />
         <activity android:name=".Add_R_Activity" />
